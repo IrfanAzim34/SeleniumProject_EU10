@@ -13,11 +13,14 @@ public class BasicNavigations {
 
         // 2- Create instance of the Selenium WebDriver
         WebDriver driver = new ChromeDriver();
+        // Maximizes the browser window
+        driver.manage().window().maximize();
 
         // 3- Go to "https://www.tesla.com"
         driver.get("https://www.tesla.com");
 
         System.out.println("Tesla Title = " + driver.getTitle());
+        System.out.println("Tesla URL = " + driver.getCurrentUrl());
 
         // Stop code execution for 3 seconds
         Thread.sleep(3000);
@@ -45,6 +48,12 @@ public class BasicNavigations {
 
         // Get the title of the page
         System.out.println("Google Title = " + driver.getTitle());
+
+        // Get the URL of the page
+        System.out.println("Google URL = " + driver.getCurrentUrl());
+
+        // Close the browser window
+        driver.close();
 
     }
 
