@@ -17,6 +17,8 @@ public class BasicNavigations {
         // 3- Go to "https://www.tesla.com"
         driver.get("https://www.tesla.com");
 
+        System.out.println("Tesla Title = " + driver.getTitle());
+
         // Stop code execution for 3 seconds
         Thread.sleep(3000);
 
@@ -42,7 +44,7 @@ public class BasicNavigations {
         driver.navigate().to("https://www.google.com");
 
         // Get the title of the page
-        System.out.println("driver.getTitle() = " + driver.getTitle());
+        System.out.println("Google Title = " + driver.getTitle());
 
     }
 
