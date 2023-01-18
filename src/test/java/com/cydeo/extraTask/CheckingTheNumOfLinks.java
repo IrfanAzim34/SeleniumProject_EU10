@@ -1,13 +1,13 @@
 package com.cydeo.extraTask;
 
-import com.cydeo.base.TestBase;
+import com.cydeo.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class CheckingTheNumOfLinks extends TestBase {
+public class CheckingTheNumOfLinks {
 
     @Test(priority = 1)
     public void numberOfLink(){
@@ -16,9 +16,9 @@ public class CheckingTheNumOfLinks extends TestBase {
         //3. Count the number of the links on the page and verify
         //Expected: 332
 
-        driver.get("https://www.openxcell.com");
+        Driver.getDriver().get("https://www.openxcell.com");
 
-        List<WebElement> links = driver.findElements(By.tagName("a"));
+        List<WebElement> links = Driver.getDriver().findElements(By.tagName("a"));
 
         System.out.println("Number Of Links = " + links.size());
         System.out.println("");
@@ -30,9 +30,9 @@ public class CheckingTheNumOfLinks extends TestBase {
 
         //2. Go to https://www.openxcell.com
         //3. Print out all of the texts of the links on the page
-        driver.get("https://www.openxcell.com");
+        Driver.getDriver().get("https://www.openxcell.com");
 
-        List<WebElement> links = driver.findElements(By.tagName("a"));
+        List<WebElement> links = Driver.getDriver().findElements(By.tagName("a"));
         int a = 1;
         for (WebElement link : links) {
             System.out.println(a + ".Text of Link = " + link.getText());
@@ -49,9 +49,9 @@ public class CheckingTheNumOfLinks extends TestBase {
         //2. Go to https://www.openxcell.com
         //3. Count the number of links that does not have text and verify
         //Expected: 109
-        driver.get("https://www.openxcell.com");
+        Driver.getDriver().get("https://www.openxcell.com");
 
-        List<WebElement> links = driver.findElements(By.tagName("a"));
+        List<WebElement> links = Driver.getDriver().findElements(By.tagName("a"));
 
         int a = 0;
         for (WebElement link : links) {

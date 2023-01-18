@@ -1,6 +1,6 @@
 package com.cydeo.tests.day4_findElements_checkBoxes_radio.tasks;
 
-import com.cydeo.utilities.WebDriverFactory;
+import com.cydeo.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,7 +12,7 @@ public class Task3 {
     public static void main(String[] args) {
 
         //Open Chrome browser
-        WebDriver driver = WebDriverFactory.getDriver("chrome");
+        WebDriver driver = Driver.getDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 

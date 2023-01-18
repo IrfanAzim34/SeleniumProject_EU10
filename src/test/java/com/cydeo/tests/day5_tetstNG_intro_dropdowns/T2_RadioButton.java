@@ -1,6 +1,6 @@
 package com.cydeo.tests.day5_tetstNG_intro_dropdowns;
 
-import com.cydeo.utilities.WebDriverFactory;
+import com.cydeo.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,7 +12,7 @@ public class T2_RadioButton {
     public static void main(String[] args) {
 
         //1. Open Chrome browser
-        WebDriver driver = WebDriverFactory.getDriver("Chrome");
+        WebDriver driver = Driver.getDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 

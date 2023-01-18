@@ -1,6 +1,6 @@
 package com.cydeo.tests.day3_cssSelector_xPath.tasks;
 
-import com.cydeo.utilities.WebDriverFactory;
+import com.cydeo.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -8,7 +8,7 @@ public class Task2 {
 
     public static void main(String[] args) {
 
-        WebDriver driver = WebDriverFactory.getDriver("chrome");
+        WebDriver driver = Driver.getDriver();
 
         driver.manage().window().maximize();
 
