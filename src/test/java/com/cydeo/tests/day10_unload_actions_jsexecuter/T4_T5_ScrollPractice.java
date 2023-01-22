@@ -1,8 +1,8 @@
 package com.cydeo.tests.day10_unload_actions_jsexecuter;
 
-import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.Driver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
@@ -20,8 +20,7 @@ public class T4_T5_ScrollPractice {
         //4- Scroll using Actions class “moveTo(element)” method
         Actions actions = new Actions(Driver.getDriver());
         WebElement cydeo = Driver.getDriver().findElement(By.xpath("//a[.='CYDEO']"));
-        actions.moveToElement(cydeo).perform();
-        BrowserUtils.sleep(2);
+        actions.moveToElement(cydeo).pause(2000).perform();
     }
 
     @Test
@@ -29,9 +28,12 @@ public class T4_T5_ScrollPractice {
 
         //1- Continue from where the Task 4 is left in the same test.
         //2- Scroll back up to “Home” link using PageUP button
-        WebElement homeBtn = Driver.getDriver().findElement(By.xpath("//a[.='Home']"));
+//        WebElement homeBtn = Driver.getDriver().findElement(By.xpath("//a[.='Home']"));
         Actions actions = new Actions(Driver.getDriver());
-        actions.moveToElement(homeBtn).perform();
+//        actions.moveToElement(homeBtn).perform();
+        actions.sendKeys(Keys.PAGE_UP,Keys.PAGE_UP,Keys.PAGE_UP).perform(); // Not Useful!!!
+
+        Driver.closeDriver();
 
     }
 

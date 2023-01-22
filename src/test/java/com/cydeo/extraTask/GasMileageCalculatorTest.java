@@ -3,7 +3,6 @@ package com.cydeo.extraTask;
 import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.Driver;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -14,7 +13,7 @@ public class GasMileageCalculatorTest {
     public void calculate_Verify_GasMileage(){
 
         //2. Go to https://www.calculator.net
-        Driver.getDriver().get("https://www.calculator.net ");
+        Driver.getDriver().get("https://www.calculator.net");
 
         //3. Search for “gas mileage” using search box
         WebElement searchBox = Driver.getDriver().findElement(By.xpath("//input[@type='text']"));
@@ -36,26 +35,22 @@ public class GasMileageCalculatorTest {
 
         //6. Locate, clear and type “7925” into “Current odometer” field
         WebElement currentOdometerBox = Driver.getDriver().findElement(By.xpath("//input[@name='uscodreading']"));
-        currentOdometerBox.sendKeys(Keys.CONTROL + "a");
-        currentOdometerBox.sendKeys(Keys.DELETE);
+        currentOdometerBox.clear();
         currentOdometerBox.sendKeys("7925");
 
         //7. Locate, clear and type “7550” into “Previous odometer” field
         WebElement previousOdometerBox = Driver.getDriver().findElement(By.xpath("//input[@name='uspodreading']"));
-        previousOdometerBox.sendKeys(Keys.CONTROL + "a");
-        previousOdometerBox.sendKeys(Keys.DELETE);
+        previousOdometerBox.clear();
         previousOdometerBox.sendKeys("7550");
 
         //8. Locate, clear and type “16” into “Gas added” field
         WebElement gasAddedBox = Driver.getDriver().findElement(By.xpath("//input[@name='usgasputin']"));
-        gasAddedBox.sendKeys(Keys.CONTROL + "a");
-        gasAddedBox.sendKeys(Keys.DELETE);
+        gasAddedBox.clear();
         gasAddedBox.sendKeys("16");
 
         //9. Locate, clear and type “3.55” into “Gas price” field
         WebElement gasPrice = Driver.getDriver().findElement(By.xpath("//input[@name='usgasprice']"));
-        gasPrice.sendKeys(Keys.CONTROL + "a");
-        gasPrice.sendKeys(Keys.DELETE);
+        gasPrice.clear();
         gasPrice.sendKeys("3.55");
 
         //10. Click on Calculate button

@@ -12,7 +12,7 @@ public class T7_ScrollUsingJSExecutor {
     @Test
     public void scrollJSExecutor(){
 
-        //1- Open a chrome browser
+        //1- Open a Chrome browser
         //2- Go to: https://practice.cydeo.com/large
         Driver.getDriver().get("https://practice.cydeo.com/large");
 
