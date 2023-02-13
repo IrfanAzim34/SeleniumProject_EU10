@@ -99,9 +99,6 @@ public class InstagramComparison {
 
         // Get Each Following name from Element List
         for (WebElement eachElement : followingList) {
-            if (eachElement.getText().equalsIgnoreCase("verified")){
-                continue;
-            }
             followingNames.add(eachElement.getText());
         }
 
@@ -116,6 +113,9 @@ public class InstagramComparison {
         System.out.println("You Can Delete " + followingNames.size() + " Profiles, Right Now!!!");
         System.out.println("Below is the Profiles that You Can Delete Immediately: ");
         for (String each : followingNames) {
+            if (each.equalsIgnoreCase("verified")){
+                continue;
+            }
             System.out.println(each);
         }
 
